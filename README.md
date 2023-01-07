@@ -37,3 +37,16 @@
   error
   - name 파라미터 누락시 400을 반환한다.
   - name이 중복일 경우 409를 반환한다.
+
+에러 -> DELETE 테스트에서 이미 '/users/1' 을 삭제했기 때문에
+       POST 테스트에서 '/users' .send({name : 'alice'})를 했을 시 테스트에 실패하였습니다. 그래서 alice가 아닌 post로 추가해준 daniel로 바꿔줌.
+5. PUT /users/:id
+
+  success
+  - 변경된 name을 응답한다
+
+  error
+  - 정수가 아닌 id일 경우 400 응답
+  - name이 없을 경우 400 응답
+  - 없는 유저일 경우 404 응답
+  - 이름이 중복일 경우 409 응답
