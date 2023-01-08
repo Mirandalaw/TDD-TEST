@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon src/index.js",
-    "test": "node_modules/.bin/mocha src/index.spec.js"
+    "server": "nodemon bin/www.js",
+    "test": "NODE_ENV=test mocha api/user/user.spec.js"
   },
   "repository": {
     "type": "git",

@@ -50,3 +50,17 @@
   - name이 없을 경우 400 응답
   - 없는 유저일 경우 404 응답
   - 이름이 중복일 경우 409 응답
+
+6. 코드 정리
+  
+  - 역할에 따라 파일로 분리하기
+    - api/user/index.js
+    - api/user/user.ctrl.js
+    - api/user/user.spec.js
+   
+   * 환경변수 사용 NODE_ENV=test 
+    process라는 객체에 할당됨. 
+   * 근본적인 문제 app.listen을 지운 이유
+    테스트 코드 api/user/user.spec.js 에서 supterTest에서
+    Request(app) 내부적으로 express 서버를 구동하여 중복으로 일어나고 있기 때문에 index.js에서 app.listen을 지웠음.
+
