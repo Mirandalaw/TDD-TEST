@@ -64,3 +64,6 @@
     테스트 코드 api/user/user.spec.js 에서 supterTest에서
     Request(app) 내부적으로 express 서버를 구동하여 중복으로 일어나고 있기 때문에 index.js에서 app.listen을 지웠음.
 
+7. Sequlize사용하여 DB 만들기
+  
+  - DB에 맞춰서 user.ctrl.js 코드 변경
